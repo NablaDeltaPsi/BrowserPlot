@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>BrowserPlot</title>
+</head>
+<body>
+	<style>
+		#container {
+		  margin-bottom: 20px;
+		}
+	</style>
+	<div id=container>
+	  <button id="btn_xy" onclick="toggle_xy()">xy</button>
+	  <input type="file" id="hiddenFileButton" onchange="loadFiles()" multiple style="display: none;">
+	  <input type="button" id="fileButton" value="Browse" onclick="document.getElementById('hiddenFileButton').click();" />
+	  <label for="fileButton" id="fileLabel">---</label>
+	  <button id="btn_logx" onclick="toggle_logx()">logx</button>
+	  <button id="btn_logy" onclick="toggle_logy()">logy</button>
+	  <button id="btn_zero" onclick="toggle_zero()">zero</button>
+	  <button id="btn_norm" onclick="toggle_norm()">norm</button>
+	</div>
+	<div>
+	  <canvas id="myChart"></canvas>
+	</div>
+	<script src="BrowserPlot.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
